@@ -1,0 +1,20 @@
+@import "../../assets/scss/variable.scss";
+
+.footer-content{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+    background-color:$black;
+    text-align: center;
+    padding: 15px;
+    p{
+        color: $white;
+        line-height: 1rem;
+        margin: 0;
+    }
+    a{
+        color: $white;
+        text-decoration: none;
+    }
+}

@@ -1,0 +1,376 @@
+@mixin landing-btn {
+    background-color: $black;
+    color: $white;
+    border-radius: 23px;
+    font-size: 12px;
+}
+
+@mixin mat-icon {
+    position: absolute;
+    right: 4px;
+    top: 5px;
+}
+
+@mixin popup-heading-text {
+    background-color: $black;
+    color: $white;
+    padding: 5px 25px;
+}
+
+@mixin mat-dialog {
+    padding: 0;
+    border-radius: 20px;
+    border-right: 8px solid $violet-border;
+    border-bottom: 8px solid $violet-border;
+}
+
+@mixin dialog-btns {
+    padding: 5px 60px;
+    .mat-button {
+        @include landing-btn;
+        line-height: 30px;
+    }
+}
+
+@mixin rem-fallback($property, $values...) {
+    $max: length($values);
+    $remValues: '';
+    @for $i from 1 through $max {
+        $value: nth($values, $i) / 16;
+        $remValues: #{$remValues + $value}rem;
+        @if $i < $max {
+            $remValues: #{$remValues + " "};
+        }
+    }
+    #{$property}: $remValues;
+}
+
+@mixin light-btn {
+    background-color: #fffdfd;
+    color: #989898;
+    border-radius: 23px;
+    font-size: 12px;
+}
+
+@mixin dark-btn {
+    background-color: black;
+    color: white;
+    border-radius: 23px;
+    font-size: 12px;
+}
+
+@mixin breakpoint($point) {
+    @if $point==ipadLandscape {
+        @media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+            @content;
+        }
+    }
+    @if $point==ipadPro {
+        @media only screen and (min-width: 1024px) and (max-width: 1199px) and (orientation: landscape) {
+            @content;
+        }
+    }
+}
+
+.containermix {
+    margin: 1rem 4rem 2rem 4rem;
+    border-radius: 1rem;
+    // border: 1px solid #c3c1c1;
+    border: 1px solid #e2e0e0;
+    .container-header {
+        margin: 1rem 4rem 5rem 2.8rem;
+        .simulate-button {
+            // @include rem-fallback(margin, 15);
+            color: white;
+            border-radius: 3rem;
+            background-image: linear-gradient(111.55deg, #008eff 0%, #a100ff 100%);
+            // border: solid 1.5px black;
+        }
+        .discovery-check {
+            padding-right: 50px;
+        }
+        .greadian-point {
+            content: "";
+            background: linear-gradient(to left, #147cff 0%, #9c04ff 100%);
+            width: 28px;
+            height: 24px;
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 0 25px 25px 0;
+            margin-left: -46px;
+            margin-right: 18px;
+        }
+    }
+}
+@mixin for-IE-only  {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active){ 
+  @content; 
+  }
+}
+@mixin addScrollBar {
+    &::-webkit-scrollbar {
+        width: 0.6em;
+        height: 0.5em;
+    }
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+    &::-webkit-scrollbar-track-piece {
+        background: $white;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $primary-gradient-1;
+        border-radius: 20px;
+    }
+}
+
+@font-face {
+    font-family: 'Graphik-Regular-Web';
+    src: url('/assets/fonts/Graphik-Regular-Web.eot');
+    src: url('/assets/fonts/Graphik-Regular-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Graphik-Regular-Web.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/assets/fonts/Graphik-Regular-Web.woff') format('woff'), /* Pretty Modern Browsers */
+    /*url('webfont.ttf') format('truetype'), Safari, Android, iOS*/
+    /*url('webfont.svg#svgFontName') format('svg');*/
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Graphik-Light-Web';
+    src: url('/assets/fonts/Graphik-Light-Web.eot');
+    src: url('/assets/fonts/Graphik-Light-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Graphik-Light-Web.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/assets/fonts/Graphik-Light-Web.woff') format('woff'), /* Pretty Modern Browsers */
+    /*url('webfont.ttf') format('truetype'), Safari, Android, iOS*/
+    /*url('webfont.svg#svgFontName') format('svg');*/
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Graphik-Medium-Web';
+    src: url('/assets/fonts/Graphik-Medium-Web.eot');
+    src: url('/assets/fonts/Graphik-Medium-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Graphik-Medium-Web.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/assets/fonts/Graphik-Medium-Web.woff') format('woff'), /* Pretty Modern Browsers */
+    /*url('webfont.ttf') format('truetype'), Safari, Android, iOS*/
+    /*url('webfont.svg#svgFontName') format('svg');*/
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Graphik-Semibold-Web';
+    src: url('/assets/fonts/Graphik-Semibold-Web.eot');
+    src: url('/assets/fonts/Graphik-Semibold-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Graphik-Semibold-Web.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/assets/fonts/Graphik-Semibold-Web.woff') format('woff'), /* Pretty Modern Browsers */
+    /*url('webfont.ttf') format('truetype'), Safari, Android, iOS*/
+    /*url('webfont.svg#svgFontName') format('svg');*/
+    /* Legacy iOS */
+}
+
+@font-face {
+    font-family: 'Graphik-Black-Web';
+    src: url('/assets/fonts/Graphik-Black-Web.eot');
+    src: url('/assets/fonts/Graphik-Black-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('/assets/fonts/Graphik-Black-Web.woff2') format('woff2'), /* Super Modern Browsers */
+    url('/assets/fonts/Graphik-Black-Web.woff') format('woff'), /* Pretty Modern Browsers */
+    /*url('webfont.ttf') format('truetype'), Safari, Android, iOS*/
+    /*url('webfont.svg#svgFontName') format('svg');*/
+    /* Legacy iOS */
+}
+//Media queries
+@mixin max-width-1280px{
+    @media screen and (min-width: 1025px) and (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin max-width-1366px{
+    @media screen and (min-width: 1281px) and (max-width: 1366px) {
+    @content;
+    }
+   }
+@mixin max-width-1440px{
+    @media screen and (min-width: 1367px) and (max-width: 1440px) {
+    @content;
+    }
+   }
+   @mixin max-width-1536px{
+   @media screen and (min-width: 1441px) and (max-width: 1536px) {
+    @content;
+}
+}
+@mixin max-width-1920px{
+    @media screen and (min-width: 1537px) and (max-width: 1920px) {
+        @content;
+    }
+}
+//check and remove later
+@mixin body-margin-top {
+    margin-top: 9%;
+}
+@mixin btn-gradient{
+    background: #167bff; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #167bff 31%, #a100ff 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #167bff 31%,#a100ff 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #167bff 31%,#a100ff 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@mixin border-gradient{
+    background: #3d57ff; /* Old browsers */
+    background: -moz-linear-gradient(45deg,  #3d57ff 0%, #2989d8 38%, #2989d8 38%, #207cca 42%, #207cca 42%, #a100ff 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(45deg,  #3d57ff 0%,#2989d8 38%,#2989d8 38%,#207cca 42%,#207cca 42%,#a100ff 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(45deg,  #3d57ff 0%,#2989d8 38%,#2989d8 38%,#207cca 42%,#207cca 42%,#a100ff 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@mixin upoad-btn-gradient{
+    background: #9700ff; /* Old browsers */
+    background: -moz-linear-gradient(left,  #9700ff 0%, #7700ff 74%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #9700ff 0%,#7700ff 74%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #9700ff 0%,#7700ff 74%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+ //Material Icons Fonts
+
+/* fallback */
+@font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/mat-icons/MaterialIcons-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIcons-Regular'),
+         url(/assets/mat-icons/MaterialIcons-Regular.woff2) format('woff2'),
+         url(/assets/mat-icons/MaterialIcons-Regular.woff) format('woff'),
+         url(/assets/mat-icons/MaterialIcons-Regular.svg) format('svg'),
+         url(/assets/mat-icons/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons Outlined';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/mat-icons/MaterialIconsOutlined-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIconsOutlined-Regular'),
+         url(/assets/mat-icons/MaterialIconsOutlined-Regular.woff2) format('woff2'),
+         url(/assets/mat-icons/MaterialIconsOutlined-Regular.woff) format('woff'),
+         url(/assets/mat-icons/MaterialIconsOutlined-Regular.svg) format('svg'),
+         url(/assets/mat-icons/MaterialIconsOutlined-Regular.ttf) format('truetype');
+  }
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons Round';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/MaterialIconsRound-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIconsRound-Regular'),
+         url(/assets/mat-icons/MaterialIconsRound-Regular.woff2) format('woff2'),
+         url(/assets/mat-icons/MaterialIconsRound-Regular.woff) format('woff'),
+         url(/assets/mat-icons/MaterialIconsRound-Regular.svg) format('svg'),
+         url(/assets/mat-icons/MaterialIconsRound-Regular.ttf) format('truetype');
+  }
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons Sharp';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/mat-icons/MaterialIconsSharp-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIconsSharp-Regular'),
+         url(/assets/mat-icons/MaterialIconsSharp-Regular.woff2) format('woff2'),
+         url(/assets/mat-icons/MaterialIconsSharp-Regular.woff) format('woff'),
+         url(/assets/mat-icons/MaterialIconsSharp-Regular.svg) format('svg'),
+         url(/assets/mat-icons/MaterialIconsSharp-Regular.ttf) format('truetype');
+  }
+  /* fallback */
+  @font-face {
+    font-family: 'Material Icons Two Tone';
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/fonts/MaterialIconsTwoTone-Regular.eot); /* For IE6-8 */
+    src: local('Material Icons'),
+         local('MaterialIconsTwoTone-Regular'),
+         url(/assets/mat-icons/MaterialIconsTwoTone-Regular.woff2) format('woff2'),
+         url(/assets/mat-icons/MaterialIconsTwoTone-Regular.woff) format('woff'),
+         url(/assets/mat-icons/MaterialIconsTwoTone-Regular.svg) format('svg'),
+         url(/assets/mat-icons/MaterialIconsTwoTone-Regular.ttf) format('truetype');
+  }
+  
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .material-icons-round {
+    font-family: 'Material Icons Round';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .material-icons-sharp {
+    font-family: 'Material Icons Sharp';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .material-icons-two-tone {
+    font-family: 'Material Icons Two Tone';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }

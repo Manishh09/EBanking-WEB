@@ -1,0 +1,84 @@
+<div class="form_container">
+    <form [formGroup]="signUpForm">
+        <div class="signup-section">
+        <header>SignUp</header>
+        <label>
+            Email<span>*</span>
+          </label>
+          <input type="text" formControlName="emailId" >
+          <div *ngIf=emailId.pending>Checking the emailid's existense...</div>
+        
+          <div *ngIf="emailId.invalid && emailId.touched"> 
+            <div *ngIf="emailId.hasError('required')">  
+                <span class="error-msg">Please enter the email id</span>
+            </div> 
+    
+            <!-- <div *ngIf="email.hasError('pattern')" >  
+            <span class="error-msg">Enter the valid email id (ex: username@domain.com)</span>
+            </div>  -->
+            <div *ngIf="emailId.errors.errorMsg">  
+                <span class="error-msg">Email Exists</span>
+            </div> 
+        </div>
+    
+       <br/>
+
+    <div formGroupName="passwordGroup">
+
+        
+        <label>
+          Password<span>*</span>
+         
+        </label>
+        <input type="password" formControlName="password" id="password">
+        
+        <div *ngIf="password.invalid && password.touched"> 
+            <div *ngIf="password.hasError('required')" >  
+                <span class="error-msg">Please enter password.</span> 
+            </div> 
+            <div *ngIf="password.hasError('minLength')" >  
+                <span class="error-msg">Enter the valid password, should contain atleast a number, three upper and lower case characters</span>
+            </div>
+            <div *ngIf="password.hasError('pattern')" >  
+                <span class="error-msg">Invalid Password..! Should contain atleast one number ,3 upper and lower case characters</span>
+            </div> 
+       </div>
+    
+        <br/>
+        
+        <label>
+            Confirm Password<span>*</span>            
+          </label>
+          <input type="password" formControlName="confirmPassword" id="confirmPassword">
+          
+          <div *ngIf="confirmPassword.invalid && confirmPassword.touched"> 
+              <div *ngIf="confirmPassword.hasError('required')" >  
+                  <span class="error-msg">Please enter password.</span> 
+              </div> 
+              <div *ngIf="password.hasError('minLength')" >  
+                <span class="error-msg">Enter the valid password, should contain atleast a number, three upper and lower case characters</span>
+            </div>
+              <div *ngIf="confirmPassword.hasError('pattern')" >  
+                  <span class="error-msg">Enter the valid password</span>
+                </div>
+             
+               
+         </div>
+         <div *ngIf="confirmPassword.valid && PasswordsGroup.hasError('passwordsMatch')">
+            <span class="error-msg">Password mismatch found, Please re-enter valid the credentials</span>
+        </div>
+  </div>
+
+        
+    
+      <div class="btn-submit"> 
+        <button type="submit"  [ngClass]="disableSubmit()?'btn-enabled':'btn-disabled'" [disabled]="!disableSubmit()" (click)="onSubmit()">
+            Submit
+        </button>
+    </div>
+</div>
+    </form>
+  
+    </div>
+    
+  

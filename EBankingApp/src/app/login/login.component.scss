@@ -1,0 +1,112 @@
+.form_container{
+   margin : 11px auto;
+   width:550px;
+   //display: grid;
+}
+form header {
+   background:#366bb2;
+   padding: 13px 20px;
+   color: white;
+   font-size: 1.4em;
+   font-weight: 600;
+   border-radius: 5px;
+   font-style: normal;
+}
+
+form label {
+   margin-left: 1px;
+   display: inline-block;
+   margin-top: 16px;
+   margin-bottom: -7px;
+   position: relative;
+}
+form label span {
+   color: #FF3838;
+   // font-size: 2em;
+   // position: absolute;
+   // left: 2.3em;
+   // top: -10px;
+}
+form .error-msg{
+    color: #FF3838;
+    margin-left: 0px;
+}
+form input {
+   display: block;
+   width: 50%;
+  // margin-left: 20px;
+   padding: 7px 20px 5px 5px;
+   font-size: 1em;
+   border-radius: 2px;
+   outline: none;
+   border: 3px solid #ccc;
+   font-style: normal;
+}
+form button {
+   position: relative;
+   margin-left: 6rem;
+  
+   transform: translate(-50%, 0);
+   font-family: inherit;
+   color: white;
+   background: #366bb2;
+   outline: none;
+   border: none;
+   padding: 5px 15px;
+   font-size: 1.1em;
+   font-weight: 400;
+   border-radius: 3px;
+   box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+   cursor: pointer;
+   transition: all 0.15s ease-in-out;
+}
+
+form .login-section{
+   margin-top: 120px;
+   
+   //position: fixed;
+}
+.btn-showpaswd{
+
+  display: flex;
+}
+
+.btn-signin{
+      // padding: 7px 52px 8px 52px !important;
+     
+      .btn-disabled{
+         background-color: grey;
+        cursor: inherit;
+        padding: 7px 52px 8px 52px !important;
+        margin-left: 9rem;        
+      }
+      .btn-enabled{
+         cursor: pointer !important;
+           padding: 7px 52px 8px 52px !important;
+        margin-left: 9rem;   
+     } 
+  }
+.buttonclass-signup{
+
+   float: right;
+   margin: 1rem 15rem 0rem 0rem;
+   color:rgb(37, 19, 151);
+   .btn-signup{
+     padding: 6px 39px 6px 33px  !important;
+     transform: translate(-50%, 0);
+     font-family: inherit;
+     color: white;
+     background: #7a7baa;
+     outline: none;
+     border: none;
+     padding: 5px 15px;
+     font-size: 1.1em;
+     font-weight: 400;
+     border-radius: 3px;
+     box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+     cursor: pointer;
+     transition: all 0.15s ease-in-out;
+      
+   }
+   
+}

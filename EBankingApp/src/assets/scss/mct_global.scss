@@ -1,0 +1,883 @@
+@import './mixin.scss';
+@import './variable.scss';
+html {
+    font-family: $graphik-regular !important;
+}
+
+
+/*** html Tags global typography ***/
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {}
+
+@media screen and (min-width: 1025px) and (max-width: 1280px) {
+    // 13px
+    html {
+        font-size: calc(0.16rem + 0.825vw) !important;
+    }
+}
+
+@media screen and (min-width: 1281px) and (max-width: 1366px) {
+    // 13px
+    html {
+        font-size: calc(0.12rem + 0.825vw)
+    }
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1440px) {
+    // 14px
+    html {
+        font-size: calc(0.12rem + 0.825vw)
+    }
+}
+
+@media screen and (min-width: 1441px) and (max-width: 1536px) {
+    // 16px
+    html {
+        font-size: calc(0.10rem + 0.825vw)
+    }
+}
+
+@media screen and (min-width: 1537px) and (max-width: 1920px) {
+    // 16px
+    html {
+        font-size: calc(0.010rem + 0.825vw)
+    }
+}
+
+
+/*** Header tags global typography ****/
+
+h1,
+h2,
+h3,
+h4 {
+    color: $primary-bg-1 !important;
+}
+
+h1 {
+    font-size: 1.8rem !important;
+    font-family: $graphik-semibold !important;
+}
+
+h2 {
+    font-size: 1.39rem !important;
+    font-family: $graphik-black !important;
+}
+
+h3 {
+    font-size: 1.3rem !important;
+    font-family: $graphik-medium !important;
+}
+
+h4 {
+ font-size: 1.15rem !important;
+    
+    font-family: $graphik !important;
+    font-weight: 700;
+}
+
+//Primary Button Styling
+.primaryButton {
+    background-image: linear-gradient(to right, $primary-btn-from, $primary-btn-to) !important;
+    border-radius: 3rem !important;
+    box-shadow: none !important;
+    color: $white !important;
+    margin: 10px;
+    font-family: $graphik-semibold !important;
+    padding: 12px 15px !important;
+    line-height: normal !important;
+    min-width: 120px !important;
+    border: none !important;
+    cursor: pointer;
+    outline: none;
+}
+
+.primaryButton:hover,
+.primaryButton:focus {
+    outline: none;
+    background-image: linear-gradient(to right, $primary-btn-active-from, $primary-btn-active-to) !important;
+}
+
+.primaryButtonDisabled {
+    background: $primary-btn-disabled !important;
+    border-radius: 3rem !important;
+    box-shadow: none !important;
+    color: $white !important;
+    margin: 10px;
+    font-family: $graphik-semibold !important;
+    padding: 12px 15px !important;
+    line-height: normal !important;
+    min-width: 120px !important;
+    cursor: none;
+    pointer-events: none;
+    border: none !important;
+    cursor: default;
+}
+
+.primaryOutlineButton {
+    outline: none;
+    background-color: $white !important;
+    color: $primary-bg-1;
+    border: 1px solid $primary-bg-1 !important;
+    cursor: pointer;
+}
+
+//Secondary Button Styling 
+.secondaryButton {
+    color: $primary-bg-1 !important;
+    border-radius: 2.8rem !important;
+    background-color: white !important;
+    border: 3px solid $primary-bg-1 !important;
+    box-shadow: none !important;
+    margin: 10px;
+    font-family: $graphik-semibold !important;
+    padding: 9px 15px !important;
+    line-height: normal !important;
+    min-width: 120px !important;
+    cursor: pointer;
+    outline: default;
+}
+
+.secondaryButton:hover,
+.secondaryButton:focus {
+    border-color: $primary-bg-2 !important;
+    color: $primary-bg-2 !important;
+    cursor: pointer;
+    outline: none;
+}
+
+.secondaryButtonDisabled {
+    border-color: $primary-bg-3 !important;
+    color: $primary-bg-3 !important;
+    border-radius: 2.8rem !important;
+    box-shadow: none !important;
+    margin: 10px;
+    font-family: $graphik-semibold !important;
+    padding: 9px 15px !important;
+    line-height: normal !important;
+    min-width: 120px !important;
+    cursor: default !important;    
+}
+
+//Global styling for Links
+.tertiaryLink {
+    color: $tertiary-primary;
+    float: left;
+    line-height: 48px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    margin: 0.8rem;
+     :hover {
+        color: $tertiary-active;
+    }
+     :focus {
+        color: $tertiary-active;
+    }
+    .material-icons {
+        padding-right: 0;
+        padding-top: 15px;
+        float: left;
+    }
+    .tertiaryLink:hover .material-icons,
+    .tertiaryLink:hover span {
+        color: $tertiary-active;
+    }
+}
+
+.tertiaryLinkDisabled {
+    color: $tertiary-inactive;
+    float: left;
+    line-height: 48px;
+    font-size: 0.8rem;
+    cursor: default;
+    margin: 0.8rem;
+    .material-icons {
+        padding-right: 0;
+        padding-top: 15px;
+        float: left;
+    }
+}
+
+//Disabled linkText global styling
+.disabledLinkText {
+    color: $LinkText-inactive !important;
+    float: left;
+    line-height: normal !important;
+    font-size: 1rem;
+    cursor: default;
+    margin: 0.5833rem;
+    text-decoration: underline;
+    width: 100%;
+    font-family: $graphik-medium !important;
+    pointer-events: none;
+}
+
+//Link In Text Global Styling
+.linkInText {
+    color: $LinkText-primary;
+    float: left;
+    line-height: normal !important;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5833rem;
+    text-decoration: underline;
+	width: 100%;
+    font-family: $graphik-medium;
+    &:hover,
+    &:focus {
+        color: $LinkText-active;
+    }
+}
+
+.linkInTextDisabled {
+    color: $LinkText-inactive !important;
+    float: left;
+    line-height: normal !important;
+    font-size: 1rem;
+    cursor: default;
+    margin: 0.5833rem;
+    width: 100%;
+    font-family: $graphik-medium !important;
+}
+
+//Check box Brand styling
+.mat-checkbox {
+    .mat-checkbox-frame {
+        border-style:1px solid !important;
+        border-color: #c7dcff !important;
+        &:hover {
+            border-color: #74a2ff !important;
+        }
+    }
+    .mat-checkbox-background {
+        // background-color: #ffffff !important;
+        border-color: #c7dcff !important;
+        border-radius: 2px !important;
+        &:hover {
+            border-color: #74a2ff !important;
+        }
+    }
+    &.mat-checkbox-checked {
+        
+        .mat-checkbox-background {
+            background: transparent !important;
+            border-color: #518fff !important;
+        }
+    }
+    &.mat-checkbox-indeterminate {
+        .mat-checkbox-background {
+            background: transparent !important;
+            border-color: #518fff !important;
+        }
+    }
+    .mat-ripple-element {
+        background: transparent !important;
+    }
+    .mat-checkbox-inner-container {
+        .mat-checkbox-background {
+            background-color: white !important;
+            border: 1px solid gray;
+            &:hover {
+                border: 1px solid #518fff !important;
+            }
+            .mat-checkbox-checkmark-path {
+                stroke: #518fff !important;
+            }
+        }
+    }
+}
+
+//Cancel button  {
+.cancelBtn {
+    background: #43425D !important;
+    border-radius: 3rem !important;
+    box-shadow: none !important;
+    color: $white !important;
+    margin: 10px;
+    font-family: $graphik-semibold !important;
+    padding: 12px 15px !important;
+    line-height: normal !important;
+    min-width: 120px !important;
+    cursor: pointer;
+    border: none !important;
+    outline:none;
+}
+
+//dialogue content 
+.mat-dialog-container {
+    margin: 0 auto;
+    text-align: center;
+    font-family: $graphik-regular !important;
+    color: dimgrey !important;
+    font-size: 1rem !important;
+    width: 35rem;
+    padding: 10px 20px !important;
+    border-radius: 13px;
+    overflow: hidden;
+    
+}
+
+// RadioButton Global styling
+.radioButton {
+    .styled-checkbox {
+        position: absolute; // take it out of document flow
+        opacity: 0; // hide it
+        &+label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+            float: left;
+            font-family: $graphik-medium !important;
+        }
+        // Box.
+        &+label:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 2px solid $checkBoxNormal;
+            border-radius: 50%;
+            //font-family: $graphik-medium !important;
+        }
+        // Box hover
+        &:hover+label:before {
+            background: $checkBoxNormal;
+        }
+        // Box checked
+        &:checked+label:before {
+            background: $checkBoxNormal;
+        }
+        &:checked+label:after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 11px;
+            background: white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+            transform: rotate(45deg);
+        }
+    }
+}
+// mat-step-header[ng-reflect-selected=false] {
+//     cursor: default;
+// }
+// //Stepper Checker global styling
+// mat-step-header[ng-reflect-state=" "] {
+//     cursor: none;  
+//        pointer-events:none;  
+//      }
+
+.mat-vertical-stepper-header {
+  position: relative;
+  cursor: default !important;
+  pointer-events: none !important;
+
+  &.mat-step-header {
+    .mat-step-icon {
+      @include for-IE-only {
+        top: 6px;
+      }
+    }
+  }
+
+  .stepper-label {
+    position: absolute;
+    width: 100%;
+    padding: 12px 0 12px 40px;
+    top: 0;
+    // border: 1px solid red;
+    left: 0;
+    z-index: 2;
+  }
+
+  .mat-step-icon-state-edit + .mat-step-label-selected,
+  .mat-step-icon-state-edit + .mat-step-label-selected .stepper-state- {
+    color: $white !important;
+  }
+
+  .stepper-state-done,
+  .stepper-state-edit {
+    color: $white !important;
+  }
+
+  .mat-step-label div.stepper-state- {
+    cursor: default;
+    pointer-events: none;
+  }
+
+  .mat-step-label div.stepper-state-done {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+}
+  
+.example-viewport {
+    .mat-sidenav {
+        width: 250px !important;
+    }
+    .sidenav-triger-btn .right {
+        color: $white !important;
+    }
+    .mat-stepper-vertical {
+        background-color: transparent !important;
+        .mat-vertical-content {
+            text-align: left;
+            padding: 0px 28px 20px 32px;
+            //color: $primary-bg-3 !important;
+            font-size: 0.98rem !important;
+        }
+    }
+    .mat-drawer-container {
+        .mat-drawer {
+            background: linear-gradient(50deg, #004DFF 0%, #00BAFF 100%) !important;
+        }
+    }
+    .mat-vertical-content-container {
+        .mat-vertical-stepper-content {
+            .mat-vertical-content {
+                //  color: $white !important;
+                text-align: left !important;
+                padding: 0px 28px 20px 32px;
+				  @include for-IE-only{
+                    font-family: $graphik;
+                }
+            }
+        }
+    }
+    .mat-vertical-stepper-header {        
+        .mat-step-label-active {
+            &.mat-step-label-selected {
+                .mat-step-text-label {
+                    color: $white !important;
+                    font-size: 1rem !important;
+                    font-family: $graphik-semibold;
+                }
+            }
+        }
+        .mat-step-label {
+            color: #83c8ff;
+            margin-left: 30px;
+            font-size: 1rem !important;
+            font-family: $graphik-semibold;
+            &.mat-step-label-selected {
+                .mat-step-text-label {
+                    color: $white !important;
+                    font-family: $graphik-semibold;
+                    font-size: 1rem !important;
+                }
+            }
+        }
+        .mat-step-icon-state-.mat-step-icon {
+            background: white !important;
+            border: 2.8px solid $primary-bg-3;
+        }
+        .mat-step-icon {
+            .mat-icon {
+                color: $white !important;
+            }
+        }
+        // &[ng-reflect-state=done] {
+        //     .mat-step-label-active {
+        //         .mat-step-text-label {
+        //             color: $white !important;
+        //         }
+        //     }
+        // }
+        .mat-step-icon-state-done,
+        .mat-step-icon-state-edit {
+            background: $completion-bg !important;
+            border: 2.8px solid $primary-bg-3;
+        }
+    }
+}
+
+
+/************ Horizontal stepper styling ***************************/
+
+.mat-horizontal-stepper-header {
+    .mat-step-icon-state-done,
+    .mat-step-icon-state-edit {
+        background: $completion-bg !important;
+        .mat-step-icon {
+            .mat-icon {
+                color: $white !important;
+                font-weight: 600 !important;
+            }
+        }
+    }
+    .mat-step-icon {
+        border: 3px solid $primary-bg-3 !important;
+        .mat-icon {
+            color: $white !important;
+            font-weight: 600 !important;
+        }
+    }
+	.mat-step-text-label{
+        @include for-IE-only{
+            font-family: $graphik;
+        }
+    }
+}
+
+.mat-stepper-horizontal-line {
+    //background-image: linear-gradient(133.76deg, #00ff7d 100%);
+    background: $completion-bg !important;
+    height: 2px !important;
+}
+
+//     }
+// }
+//     .mat-step-icon {
+//         .mat-icon {
+//             color: $white !important;
+//         }
+//     }
+// }
+//File upload Styles
+ul.list-of-files {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.each-file {
+    list-style-type: none;
+    float: left;
+    font-size: 1rem;
+}
+.removeFile{
+  cursor: pointer !important;
+  color: #004DFF !important;
+    font-size: 12px !important;
+    font-family: $graphik-medium !important;
+    width: auto !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin-top: -4px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+    margin-left: 5px ;
+}
+.removeFile:hover{
+  color: #0032A5 !important;
+  cursor:pointer;
+}
+
+//Heading icon styles
+.left-point {
+    background: $primary-gradient-1;
+    width: 28px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0 25px 25px 0;
+    margin-right: 15px;
+    margin-left: -32px;
+}
+
+//Body Copy styles
+.b1-bodyText {
+    font-size: 1rem !important;
+    font-family: $graphik-regular !important;
+}
+
+.b2-inputText {
+    font-size: 1rem !important;
+    font-family: $graphik-medium !important;
+}
+
+.b3-largeText {
+    font-size: 1.5rem !important;
+    font-family: $graphik-regular !important;
+}
+
+.b4-breadcrumbsText {
+    font-size: 0.800rem !important;
+    font-family: $graphik-regular !important;
+}
+
+//Refresh Icon
+.refresh_icon {
+    height: 2rem !important;
+    width: 2rem !important;
+    border: 2px solid $primary-bg-1 !important;
+    border-radius: 50% !important;
+    z-index: 2 !important;
+    background: $white !important;
+    font-size: 2rem !important;
+    color: $primary-bg-1 !important;
+    padding: 0 !important;
+    cursor: pointer;
+    &:hover {
+        border-color: $primary-bg-2 !important;
+        color: $primary-bg-2 !important;
+    }
+}
+
+//Iframe Styles
+iframe {
+    border: 1px solid rgba(0, 0, 0, .12) !important;
+}
+
+/********************Mat Tab branding ****************************/
+.mat-tab-label-container{
+    .mat-tab-list {
+        .mat-tab-labels{
+            .mat-tab-label {
+              justify-content: left;
+             .mat-tab-label-content {
+                //  color: $light-grey !important;
+                  &:hover {
+                    color: $primary-bg-1;
+                    cursor:pointer;
+                  }
+              }
+            }            
+            .mat-tab-label-active {
+                opacity: 1;
+                color: $primary-bg-1;
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    background: $primary-bg-1 !important;
+                    height: 3px;
+                    bottom: 0px;
+                    left: 0 !important;
+                }
+            }
+     } 
+    }
+} 
+/*********************** Mat-Grid or TAble global branding styles *************/
+.table-header {
+    background: $primary-bg-1 !important;
+    color: $white !important;
+    font-size: 1.1rem !important;
+    font-family: $graphik-regular !important;
+    font-weight: 700;
+    border-radius: 10px 10px 0 0 !important;
+    padding: 11px 15px;
+    // &:hover, :active, :focus, :visited{
+    //     background: $primary-bg-2 !important;
+    //     }
+}
+table {
+    &.mat-table {
+        width: 100%;
+        box-shadow: none;
+        thead{
+            background: $primary-bg-1 !important;
+            tr {
+                height: 40px;
+                border-radius: 9px 9px 0 0 !important;
+            }
+        th {
+            color: $white !important;
+            font-size: 1.1rem !important;
+            font-family: $graphik-regular !important;
+            &:first-child{
+                border-radius: 10px 0 0 0;
+            }
+            &:last-child{
+                border-radius: 0 10px 0 0;
+            }
+        }
+        .mat-header-cell{
+            text-align: left !important;
+            .mat-checkbox{
+                display: none;
+            }
+        }
+    }
+        tbody {
+            border-radius:0 0 9px 9px  !important;
+            .mat-row {
+                background-color: #fafafa;
+                height: 40px;
+                &:nth-child(even){
+                    background-color:#fafeff !important;
+                }
+                &:nth-child(odd){
+                    background-color : #f9f9f9 !important;
+                }
+                &:hover {
+                    background-color: #cef2ff !important;
+            }
+            .mat-cell{
+                color: $grey-text !important;
+                font-family: $graphik-regular !important;
+                font-size: 0.95rem !important;
+                border: 0 none;
+                text-align:left;
+                &:hover{
+                color: $black !important;
+                }
+            }
+            }
+            .mat-checkbox{
+                .mat-checkbox-background{
+                    background-color: #fff !important;
+                    border: 2px solid #7e7e7e;
+                    border-radius: 3px !important;
+                    padding: 7px;
+                }
+                .mat-checkbox-checkmark-path {
+                    stroke: green !important;
+                }
+            }
+        }
+      
+    }
+}
+
+/**************** Ag grid Table Global Branding ******************/
+.ag-theme-material {
+    .ag-cell{
+    &.ag-cell-inline-editing{
+        padding: 0 !important;
+        height:100% !important;
+    }
+}
+}
+
+	.ag-theme-balham {	
+    .ag-cell{	
+        &.ag-cell-inline-editing{	
+            padding: 0 !important;	
+            height:100% !important;	
+        }	
+    }	
+}
+
+ag-grid-angular{
+    .ag-header-icon {
+        color: $white !important;
+    }
+    .ag-header{
+        background: $primary-bg-1 !important;
+        // color: $white !important;
+        // font-size: 1.1rem !important;
+        // font-family: $graphik-regular !important;
+    .ag-header-cell {
+        // background: transparent;
+        // padding-left: 8px !important;
+   
+        .ag-header-cell-text {
+          color: $white !important;
+          font-size: 1.1rem !important;
+          font-family: $graphik-regular !important;
+          word-wrap: break-word;
+          overflow: hidden;
+        // padding: 3px 7px 3px 5px;
+          white-space: normal;
+        }
+      }
+    }
+    .ag-row{
+    &:nth-child(even){
+    background-color:#fafeff !important;
+    }
+    &:nth-child(odd){
+    background-color : #f9f9f9 !important;
+    }
+    &:hover {
+    background-color: #cef2ff !important;
+    }
+    
+    }
+    .ag-cell{
+    color: $grey-text !important;
+    font-family: $graphik-regular !important;
+    font-size: 1.1rem !important;
+    &:hover{
+    color: $black !important;
+    }
+    .mat-form-field-infix {       
+        position: relative;
+        top: 7px;       
+    }    
+    }
+    .ag-header-cell{
+    &:hover, :active, :focus, :visited{
+    background: $primary-bg-1 !important;
+    }
+    }
+    .ag-cell-inline-editing{
+    background-color: #fafeff !important;
+    border-radius: 2.5px solid !important;
+    height:100% !important;
+    //box-shadow: ;
+    &:hover, :active, :focus, :visited{
+    border: none !important;
+    }
+    
+    }
+	.ag-root.ag-unselectable.ag-layout-normal {
+        border-radius: 15px 15px 0 0 !important;
+        }
+    .ag-body-horizontal-scroll-viewport {
+        overflow-x: scroll;
+        @include addScrollBar;
+    }
+    .ag-body-viewport.ag-layout-normal {
+        overflow-y: auto;
+        @include addScrollBar;
+    }
+    .ag-row {
+        border-color: $grid-border;
+    }
+    
+   }
+//For Save success and failure popups
+.upload-popup {
+    // min-width: 40%;
+     .mat-dialog-container {
+         border-radius: 0.5rem !important;
+         //box-shadow: 5px 6px 2px $violet-bg;
+         max-width: 35rem;
+         overflow: hidden;
+        // height: 13.08rem;
+     }
+ }
+
+ //MAt-radio Button Theme color
+ .mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: $checkBoxNormal !important;   /*inner circle color change*/
+}
+.mat-radio-button.cdk-focused.cdk-mouse-focused {
+    background-color: transparent !important;
+  }
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+   border-color:$checkBoxNormal !important; /*outer ring color change*/
+}  
+.global_openNewTab_icon {
+    font-size: 2.5rem !important;
+    color: $primary-bg-1;
+}
+
+
+/*** mat-slider thumb label global styling ***/
+
+.mat-slider-thumb-label {
+    transform: rotate(45deg) !important; 
+}
+.mat-slider-thumb {
+    transform: scale(0.7) !important;
+}
+.mat-slider-thumb-label-text {
+    opacity: 1 !important;
+}
+
+.error-log{
+    float:left;
+    width:100%;
+}
+.mat-list-item{
+    font-family: $graphik-regular !important;
+}

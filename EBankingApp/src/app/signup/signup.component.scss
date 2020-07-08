@@ -1,0 +1,86 @@
+@import "src/styles.scss";
+
+.form_container{
+    margin : 12px auto;
+    width:550px;
+ }
+ form header {
+   background:#366bb2;
+   padding: 13px 20px;
+   color: white;
+   font-size: 1.2em;
+   font-weight: 600;
+   border-radius: 5px;
+ }
+
+ form label {
+    margin-left: 1px;
+    display: inline-block;
+    margin-top: 16px;
+    margin-bottom: -7px;
+    position: relative;
+ }
+ form label span {
+    color: #FF3838;
+    // font-size: 2em;
+    // position: absolute;
+    // left: 2.3em;
+    // top: -10px;
+ }
+ form .error-msg{
+     color: #FF3838;
+     
+ }
+ form input {
+    display: block;
+    width: 50%;
+   // margin-left: 20px;
+    padding: 7px 20px 5px 5px;
+    font-size: 1em;
+    border-radius: 2px;
+    outline: none;
+    border: 3px solid #ccc;
+    font-style: normal;
+ }
+ form button {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: inherit;
+    color: white;
+    background:#366bb2;
+    outline: none;
+    border: none;
+    padding: 5px 73px 5px 74px;
+    font-size: 1.1em;
+    font-weight: 400;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px rgba(51, 51, 51, 0.4);
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    
+ }
+ form .signup-section{
+   margin-top: 120px;
+   
+   //position: fixed;
+}
+ .btn-submit{
+   .btn-disabled{
+      background-color: grey;
+     cursor: inherit;
+     
+   }
+   .btn-enabled{
+      cursor: pointer !important;
+   }
+ }
+ 
+
+ 
+  
+ 
+ 

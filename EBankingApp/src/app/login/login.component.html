@@ -1,0 +1,75 @@
+<div class="buttonclass-signup">
+    <!-- <button type="submit"  class="btn-signup" (click)="onSignUp()">Sign Up</button> -->
+    <!-- <a href="/signup">click here to SignUp</a> -->
+    <a routerLink="/signup" routerLinkActive="'active'">click here to SignUp</a>
+</div>
+<div class="form_container">
+    <form [formGroup]="loginForm">
+
+        <div class="login-section">
+        <header>Signin</header>
+        <label>
+            Email<span>*</span>       
+           
+          </label>
+          <input type="text" formControlName="email">
+          <div *ngIf=email.pending>Checking the emailid's existense...</div>
+          
+          <div *ngIf="email.touched "> 
+            <div *ngIf="email.errors?.required" class="error-msg">Please enter the email id  
+                <!-- <span class="error-msg">Please enter the email id</span> -->
+            </div>
+            <div *ngIf="email.errors?.email" class="error-msg">Please enter the valid email id  
+                <!-- <span class="error-msg">Please enter the valid email id</span> -->
+            </div>      
+                     
+            <div *ngIf="email.errors?.errorMessg">  
+                <span class="error-msg">Email doesn't exist, please signup</span>
+            </div> 
+        </div>
+    
+       <br/>
+        <label>
+          Password<span>*</span>
+         
+        </label>
+        <div class="btn-showpaswd">
+        <input #x type="password" formControlName="password" >
+                
+        <button class="btn-showpassword" (click)="x.type=x.type=='password'?'text':'password'">Show Password</button>
+    
+        </div>
+        <div *ngIf="password.invalid && password.touched"> 
+            <div *ngIf="password.hasError('required')" >  
+                <span class="error-msg">Please enter password.</span> 
+            </div> 
+            <div *ngIf="password.hasError('minLength')" >  
+                <span class="error-msg">Enter the valid password, should contain atleast a number, three upper and lower case characters</span>
+            </div>
+            <div *ngIf="password.hasError('pattern')" >  
+                <span class="error-msg">Enter the valid password, should contain atleast a number, three upper and lower case characters</span>
+            </div>
+             
+
+            <!-- <div *ngIf="email.hasError('uniqueEmailId')" >  
+                <span class="error-msg">Email already exists</span>
+                </div>  -->
+       </div>
+        <br/>
+       
+      <div class="btn-signin">
+          <button type="submit" [ngClass]="disableSignin()?'btn-enabled':'btn-disabled'"  [disabled]="!disableSignin()" (click)="onSignin()">SignIn</button>
+      </div>
+        
+    </div>
+    </form>
+
+    </div>
+   
+       
+
+    
+    
+    
+     
+    

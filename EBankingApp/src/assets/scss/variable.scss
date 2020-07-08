@@ -1,0 +1,143 @@
+$black: #000000;
+$violet-bg: #4600c0;
+$spinner-bg:#c5bdbdcc;
+$white: #ffffff;
+$blue:#000088;
+$gray-light: #7d7a7a;
+$light-smoke :#bbb2b2;
+$navbar-bg:#232323;
+$lightblue-bg: #c2dfff;
+$violet-text:#7500ff;
+$pink-bg: #a000fe;
+$container-bg:#f8f8f8;
+$grid-border:#fbfbfb;
+$violetdark-text: #000075;
+$bcolor:#dedbdb;
+$gray-lighter:rgba(0, 0, 0, .12);
+$grey-dark:rgba(0, 0, 0, .3);
+$yellow: #ffbb00;
+$green:green;
+$boxgray:#bbbbbb;
+$header: #FFF;
+$header-bg-1: #004cff;
+$nav:#020202;
+$black:black;
+$landing-button:#000075;
+$design-button:#000000;
+$draft-header:#008eff;
+$header-bg:#f6f5f5;
+$violetlight-text: #004dff;
+$red:#ff0000;
+$gray-dark:#606060;
+$violet-border :#5b29dc;
+$grey-border: #cecece;
+$mat-shadow:#F2F0F3;
+$green-border: #7fff00;
+$green-bg: #10ed86;
+$grey-heading: #838383;
+$grey-text: #5a5a5a;
+$black-label: #232323;
+$info-banner: #bbf1cb;
+$light-grey: #838383;
+$midnight-blue: #161671;
+$header-border:#e2e0e0;
+$labelColor:#4b4b4b;
+$cardBorder:#cccccc;
+$light-grey-border: #e0e0e0;
+$user-text: #403e3e;
+$green-stepper:#07f57d;	
+$tableborder: #d3d3d3;
+$grey-subheader: #8a8787;
+$form-label: #b3aeae8a;
+$lightgrey-background: #f3f3f3;
+$done-icon: #008000;
+$file-list: blue;
+$file-border: #dddddd;
+$file-background: #d8d8d821;
+$remove-file: #c1c1c1;
+$blue-border:#09369e;
+$icon-bg:#333333;
+$white:white;
+$primary-bg-1: #004DFF;
+$primary-bg-2: #0032A5;
+$primary-bg-3: #B2B2B2;
+$primary-bg-4: #F4F4F4;
+$primary-gradient-1: linear-gradient(111.55deg, #004DFF 0%, #00BAFF 100%);
+$primary-gradient-2: linear-gradient(111.55deg, #0043DB 0%, #0083DB 100%);
+$secondary-bg-1: #008EFF;
+$secondary-bg-2: #00BAFF;
+$secondary-bg-3: #43425D;
+$secondary-bg-4:#a100ff;
+$completion-bg: #00D700;
+$progressbar:#e2e4e5;
+$primary-bg: #b3aeae8a;
+$strpied-bg: #fafeff;
+$strpied-bg-1: #f9f9f9;
+$strpied-bg-2: #cef2ff;
+$search-bg: #80808073;
+$cardtxtcolor:#b2b9cd;
+$radio-bg:#555;
+$table-bg: #cee6fa;
+$scroll-bg: #F5F5F5;
+$border-bg: #bebebe;
+$list-bg: #0d8bc5;
+$del-bg: #0ebfef;
+$table-bg-1: #f4f6ff;
+$td-bg:#226bff;
+$label-bg: #66615d;
+$description:#4f4b4c;
+$span-col:#1f1f20;
+$label-col:#5c5959;
+$mat-icon:#b441ff;
+$file-bg:#80808021;
+$sm-gradient-1:linear-gradient(111.55deg, #2800FF 0%, #00BAFF 100%);
+$sm-gradient-2:linear-gradient(111.55deg, #06B6DA 0%, #00BAFF 100%);
+$dropdown-gradient-1: linear-gradient(111.55deg, #008eff 0%, #a100ff 100%);
+$sb-gradient-1: linear-gradient(to right, #004dff, #00baff);
+$download-gradient-1: linear-gradient(90deg, rgba(161, 0, 255, 1) 0%, #5d34f1 100%);
+$democardgradient:linear-gradient(to right, #004dff, #00baff);
+
+$ag-tooltip-bg:#f1f1f1;
+$ag-root:#bdc3c7;
+$ag-input:#e2e2e2;
+//** Font Family constants ***/
+$graphik-regular : 'Graphik-Regular-Web';
+$graphik : 'Graphik-Regular-Web';
+$graphik-semibold :'Graphik-Semibold-Web';
+$graphik-black: 'Graphik-Black-Web';
+$graphik-light :'Graphik-Light-Web';
+$graphik-medium : 'Graphik-Medium-Web';
+
+//Buttons 
+$primary-btn-from:#004DFF;
+$primary-btn-to:#00BAFF;
+$primary-btn-active-from:#0043DB;
+$primary-btn-active-to:#0083DB;
+$primary-btn-disabled:#B2B2B2;
+
+/*tertiary Links*/
+$tertiary-primary:#004DFF;
+$tertiary-active:#0032A5;
+$tertiary-inactive:#B2B2B2;
+
+/*Link in Text*/
+$LinkText-primary:#004DFF;
+$LinkText-active:#0032A5;
+$LinkText-inactive:#B2B2B2;
+
+/*checkbox */
+$checkBoxNormal:#004DFF;
+$checkBoxActive:#004DFF;
+
+//popup
+$popheaderbg:#0906ad;
+
+
+// finalize stepper
+$finalizeSteppercontainer: #fafafa;
+$finalizeStepper: #fafafa;
+
+//Save 
+$save-failure:#fb67bf;
+$save-success:#11b706;
+$file-validation-progress:#ffb900;

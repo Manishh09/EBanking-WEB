@@ -1,0 +1,46 @@
+<div class="header-section">
+  <!-- <a class="fa fa-signal-3" href="#"></a> -->
+  <!-- logo -->
+  <div class="header-content">
+           
+    <div class="logo-section">
+      <img src="assets/logoebank.png" class="logo">
+      <span class="header-spacer"></span>
+      <p class="tag-line">Makes your life simpler</p>
+    </div>
+      <span class="header-spacer"></span>
+    
+    
+    <!-- <i style="font-size:24px" class="fa">&#xf0f3;</i><span class="w3-badge">{{notificationArray.length}}</span>  -->
+    
+     
+      <div class="user-section" *ngIf="isloggedIn">
+     
+        <mat-menu #menu="matMenu" class="abcd">       
+              <button mat-menu-item  (click)="signOut()">Sign Out</button>
+        </mat-menu>
+
+      <span class="usericon"><span class="username">manish.boge</span>
+        <!-- <mat-icon class="foc-header__searchicon">search</mat-icon> -->
+        <mat-icon [matMenuTriggerFor]="menu" class="header__usericon">account_circle</mat-icon>
+      </span>
+    </div>
+
+    <div class="notification-section">
+    <mat-icon class="bell-icon" *ngIf="isloggedIn">
+      notifications      
+    </mat-icon> 
+       <span class="hide-notification-count" 
+          *ngIf="isloggedIn"
+          matBadge="{{notificationArray.length}}"       
+          matBadgeColor="warn" 
+          matTooltip="You have {{notificationArray.length}} Notifications">
+        </span>
+    </div>
+ 
+  </div>
+  
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
